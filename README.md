@@ -1,2 +1,2 @@
 # trabalho-devops
-Trabalho referente a disciplina de DevOps
+Olá, este trabalho é referente a disciplina de DevOps
