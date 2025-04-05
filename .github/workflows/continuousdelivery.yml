@@ -1,8 +1,6 @@
 name: Continuous Devlivery
 on:
-  push:
-    branches:
-      - main # ou qualquer outra branch
+  - push
 
 jobs:
   deliver:
