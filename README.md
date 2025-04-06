@@ -1,2 +1,2 @@
 # trabalho-devops
-Olá, este trabalho é referente a disciplina de DevOps, utlizando FastAPI e Docker
+Este projeto foi desenvolvido como parte da disciplina de DevOps, e tem como objetivo demonstrar conceitos práticos utilizando FastAPI e Docker.
