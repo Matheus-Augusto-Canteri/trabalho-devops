@@ -39,3 +39,29 @@ async def test_delete_estudante_negativo():
 async def test_delete_estudante_positivo():
     result = await delete_estudante(10)
     assert result
+
+@pytest.mark.asyncio
+async def test_create_estudante_empty_name():
+    estudante_test = Estudante(name="", curso="Engenharia", ativo=True)
+    result = await create_estudante(estudante_test)
+    assert result.name == ""
+    assert result.curso == "Engenharia"
+    assert result.ativo is True
+
+@pytest.mark.asyncio
+async def test_create_estudante_invalid_data():
+    estudante_test = Estudante(name="Lucas", curso="", ativo=False)
+    result = await create_estudante(estudante_test)
+    assert result.name == "Lucas"
+    assert result.curso == ""
+    assert not result.ativo
+
+@pytest.mark.asyncio
+async def test_update_estudante_zero():
+    result = await update_estudante(0)
+    assert not result
+
+@pytest.mark.asyncio
+async def test_delete_estudante_zero():
+    result = await delete_estudante(0)
+    assert not result
