@@ -65,3 +65,11 @@ async def test_update_estudante_zero():
 async def test_delete_estudante_zero():
     result = await delete_estudante(0)
     assert not result
+
+@pytest.mark.asyncio
+async def test_create_estudante_valid_data():
+    estudante_test = Estudante(name="Ana", curso="Medicina", ativo=True)
+    result = await create_estudante(estudante_test)
+    assert result.name == "Ana"
+    assert result.curso == "Medicina"
+    assert result.ativo is True
